@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford 2021 Line Up</title>
+    <link rel="stylesheet" type="text/css" href="../../clientviews/css/">
+</head>
+
+<body>
+   <header>
+     <h1></h1>  
+   </header> 
+    <nav>
+        <a href="/">Home</a>
+        <a href="/">Search</a>
+        {{#if loggedIn}}
+        <button id = "logout" class="btn">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+    </nav>
+
+    <main>
+        <h2></h2>
+        {{{body}}}
+
+    </main>
+    {{#if loggedIn}}
+    <script src=""></script>
+    {{/if}}
+
+</body>
+
+</html>
