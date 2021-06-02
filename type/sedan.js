@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Sedan extends Model {}
 
-Project.init(
+Sedan.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -37,7 +37,7 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "project",
+    modelName: "sedan",
   }
 );
 

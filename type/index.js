@@ -1,7 +1,7 @@
-const user = require("./user");
-const hybrid = require("./hybrid");
-const sedan = require("./sedan");
-const suv = require("./suv");
-const truck = require("./truck");
+const User = require("./user");
+const Hybrid = require("./hybrid");
+const Sedan = require("./sedan");
+const Suv = require("./suv");
+const Truck = require("./truck");
 
-module.exports = { user, hybrid, sedan, suv, truck };
+module.exports = { User, Hybrid, Sedan, Suv, Truck };

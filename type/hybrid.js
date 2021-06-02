@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Hybrid extends Model {}
 
-Project.init(
+Hybrid.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -37,7 +37,7 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "project",
+    modelName: "hybrid",
   }
 );
 
