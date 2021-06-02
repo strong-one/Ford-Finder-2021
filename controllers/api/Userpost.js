@@ -22,12 +22,7 @@ router.get("/", async (req, res) => {
 // });
 router.post("/", async (req, res) => {
   try {
-    const userData = await Userpost.create({
-      model_name: req.body.model_name,
-      engine_type: req.body.engine_type,
-      transmission: req.body.transmission,
-      color: req.body.color,
-    });
+    const userData = await Userpost.create(req.body);
     res.status(200).json(userData);
   } catch (err) {
     console.log(err);
