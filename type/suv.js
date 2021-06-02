@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 
 class Suv extends Model {}
 
-Project.init(
+Suv.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -37,7 +37,7 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "project",
+    modelName: "suv",
   }
 );
 
