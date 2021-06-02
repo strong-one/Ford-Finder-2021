@@ -1,4 +1,4 @@
-const { Truck } = require("../type");
+const { Truck } = require("../model");
 
 const truckData = [
   {

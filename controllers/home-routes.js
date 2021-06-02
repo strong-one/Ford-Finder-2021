@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User } = require("../model");
 // const withAuth = require('../utils/auth');
 // "withAuth" goes between "/" and async
 
