@@ -40,4 +40,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/truck", (req, res) => {
+  res.render("truck");
+});
+
 module.exports = router;
