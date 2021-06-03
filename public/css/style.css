@@ -1,0 +1,23 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    display: flex;
+}
+
+a {
+    color: ;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
