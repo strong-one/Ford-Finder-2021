@@ -1,3 +1,4 @@
+
 const signupFormHandler = async function (event) {
   event.preventDefault();
   const nameEl = document.querySelector("#name");
