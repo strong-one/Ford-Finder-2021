@@ -1,4 +1,17 @@
 <div class="trucks-card">
   <h2>Trucks</h2>
-  <div class="truck-card"></div>
+  <div class="truck-card">
+
+    {{#each allTrucks}}
+      <div class="row align-center mb-5">
+        <h3>{{truck_name}}</h3>
+        <h4>{{engine_type}}</h4>
+        <h4>{{transmission}}</h4>
+        <h4>{{color}}</h4>
+        <h4>{{price}}</h4>
+
+      </div>
+    {{/each}}
+
+  </div>
 </div>

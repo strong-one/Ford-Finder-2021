@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../model");
+const { User, Truck } = require("../model");
 // const withAuth = require('../utils/auth');
 // "withAuth" goes between "/" and async
 
@@ -12,7 +12,9 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((User) => User.get({ plain: true }));
 
-    res.render("layouts/main", {
+    console.log("req.session.loggedIn", req.session.loggedIn);
+
+    res.render("homepage", {
       users,
       loggedIn: req.session.loggedIn,
     });
@@ -40,8 +42,14 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/truck", (req, res) => {
-  res.render("truck");
+router.get("/truck", async (req, res) => {
+  //get truck data - form your truck table
+  const rawTruckData = await Truck.findAll();
+  const allTrucks = rawTruckData.map((truck) => truck.get({ plain: true }));
+
+  console.log("*****trucks", allTrucks);
+
+  res.render("truck", { allTrucks });
 });
 
 module.exports = router;
