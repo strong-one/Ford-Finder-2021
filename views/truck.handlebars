@@ -1,26 +1,21 @@
-<div class="trucks-card">
-  <h2>Trucks</h2>
+<h2>Trucks</h2>
+
+<div class="truck-container">
+
   <div class="truck-card">
 
     {{#each allTrucks}}
-      <div class="row align-center mb-5">
-        <h3>{{truck_name}}</h3>
-        <h4>{{engine_type}}</h4>
-        <h4>{{transmission}}</h4>
-        <h4>{{color}}</h4>
-        <h4>{{price}}</h4>
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          {{truck_name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{engine_type}}</li>
+          <li class="list-group-item">{{transmission}}</li>
+          <li class="list-group-item">{{color}}</li>
+          <li class="list-group-item">{{price}}</li>
+        </ul>
       </div>
     {{/each}}
-
-    {{!-- {{#each oneTruck}}
-      <div class="row align-center mb-5">
-        <h3>{{truck_name.id}}</h3>
-        <h4>{{engine_type.id}}</h4>
-        <h4>{{transmission.id}}</h4>
-        <h4>{{color.id}}</h4>
-        <h4>{{price.id}}</h4>
-      </div>
-    {{/each}} --}}
-
   </div>
 </div>

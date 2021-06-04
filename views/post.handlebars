@@ -1,4 +1,4 @@
-<div class="vehilce-post">
+{{! <div class="vehilce-post">
   <form class="post-form">
 
     <div class="vehicle-name">
@@ -26,5 +26,53 @@
 
   </form>
 
+</div> }}
+
+<div class="vehilce-post">
+  <form class="post-form">
+
+    <div class="mb-3 vehicle-name">
+      <label for="post-vehicle" class="form-label">Vehicle model</label>
+      <input
+        type="text"
+        class="form-control form-input"
+        id="vehicle-model"
+        placeholder="vehicle model"
+      />
+    </div>
+
+    <div class="mb-3 engine-post">
+      <label for="post-engine" class="form-label">Engine type</label>
+      <input
+        type="text"
+        class="form-control form-input"
+        id="vehicle-engine"
+        placeholder="type of engine"
+      />
+    </div>
+    <div class="mb-3 transmission">
+      <label for="post-transmission" class="form-label">Vehicle Transmission</label>
+      <input
+        type="text"
+        class="form-control form-input"
+        id="vehicle-transmission"
+        placeholder="transmission"
+      />
+    </div>
+    <div class="mb-3 color-post">
+      <label for="post-color" class="form-label">Vehicle color</label>
+      <input
+        type="text"
+        class="form-control form-input"
+        id="vehicle-color"
+        placeholder="color"
+      />
+    </div>
+    <div class="form-group"><button class="btn btn-primary" type="submit">Post
+        your vehicle</button></div>
+
+  </form>
+
 </div>
+
 <script src="/js/post.js"></script>
