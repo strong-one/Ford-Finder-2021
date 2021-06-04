@@ -1,0 +1,68 @@
+h2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.navbar-collapse {
+  display: flex;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.nav-link {
+  margin-left: 30px;
+  margin-right: 50px;
+}
+.post-form {
+  font-size: 25;
+  margin-top: 45;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+.all-vehicles {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.sedans-card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card-img-sedan {
+  height: 285;
+}
+
+.suvs-card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.truck-card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hybrids-card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}

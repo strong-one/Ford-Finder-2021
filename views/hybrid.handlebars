@@ -1,0 +1,22 @@
+<h2>Hybrids/Electric</h2>
+
+<div class="hybrids-container">
+
+  <div class="hybrids-card">
+
+    {{#each allHybrids}}
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          {{hybrid_name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{engine_type}}</li>
+          <li class="list-group-item">{{transmission}}</li>
+          <li class="list-group-item">{{color}}</li>
+          <li class="list-group-item">{{price}}</li>
+        </ul>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

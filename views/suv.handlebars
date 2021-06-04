@@ -1,0 +1,22 @@
+<h2>Suvs</h2>
+
+<div class="suvs-container">
+
+  <div class="suvs-card">
+
+    {{#each allSuvs}}
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          {{suv_name}}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{engine_type}}</li>
+          <li class="list-group-item">{{transmission}}</li>
+          <li class="list-group-item">{{color}}</li>
+          <li class="list-group-item">{{price}}</li>
+        </ul>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

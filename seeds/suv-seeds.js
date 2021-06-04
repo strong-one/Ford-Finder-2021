@@ -1,4 +1,4 @@
-const { Suv } = require("../type");
+const { Suv } = require("../model");
 
 const suvData = [
   {

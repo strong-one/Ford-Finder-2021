@@ -1,4 +1,4 @@
-const { Sedan } = require("../type");
+const { Sedan } = require("../model");
 
 const sedanData = [
   {

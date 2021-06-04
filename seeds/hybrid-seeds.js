@@ -1,4 +1,4 @@
-const { Hybrid } = require("../type");
+const { Hybrid } = require("../model");
 
 const hybridData = [
   {
