@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Truck } = require("../model");
+const { User, Truck, Hybrid, Sedan, Suv } = require("../model");
 // const withAuth = require('../utils/auth');
 // "withAuth" goes between "/" and async
 
@@ -11,8 +11,6 @@ router.get("/", async (req, res) => {
     });
 
     const users = userData.map((User) => User.get({ plain: true }));
-
-    console.log("req.session.loggedIn", req.session.loggedIn);
 
     res.render("homepage", {
       users,
@@ -47,9 +45,35 @@ router.get("/truck", async (req, res) => {
   const rawTruckData = await Truck.findAll();
   const allTrucks = rawTruckData.map((truck) => truck.get({ plain: true }));
 
-  console.log("*****trucks", allTrucks);
-
   res.render("truck", { allTrucks });
+  // return;
+});
+
+router.get("/hybrid", async (req, res) => {
+  //get truck data - form your truck table
+  const rawHybridData = await Hybrid.findAll();
+  const allHybrids = rawHybridData.map((hybrid) => hybrid.get({ plain: true }));
+
+  res.render("hybrid", { allHybrids });
+  // return;
+});
+
+router.get("/sedan", async (req, res) => {
+  //get truck data - form your truck table
+  const rawSedanData = await Sedan.findAll();
+  const allSedans = rawSedanData.map((sedan) => sedan.get({ plain: true }));
+
+  res.render("sedan", { allSedans });
+  // return;
+});
+
+router.get("/suv", async (req, res) => {
+  //get truck data - form your truck table
+  const rawSuvData = await Suv.findAll();
+  const allSuvs = rawSuvData.map((suv) => suv.get({ plain: true }));
+
+  res.render("suv", { allSuvs });
+  // return;
 });
 
 module.exports = router;
