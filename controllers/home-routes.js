@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Truck, Hybrid, Sedan, Suv } = require("../model");
+const { User, Truck, Hybrid, Sedan, Suv, Userpost } = require("../model");
 // const withAuth = require('../utils/auth');
 // "withAuth" goes between "/" and async
 
@@ -46,34 +46,60 @@ router.get("/truck", async (req, res) => {
   const allTrucks = rawTruckData.map((truck) => truck.get({ plain: true }));
 
   res.render("truck", { allTrucks });
-  // return;
 });
 
 router.get("/hybrid", async (req, res) => {
-  //get truck data - form your truck table
   const rawHybridData = await Hybrid.findAll();
   const allHybrids = rawHybridData.map((hybrid) => hybrid.get({ plain: true }));
 
   res.render("hybrid", { allHybrids });
-  // return;
 });
 
 router.get("/sedan", async (req, res) => {
-  //get truck data - form your truck table
   const rawSedanData = await Sedan.findAll();
   const allSedans = rawSedanData.map((sedan) => sedan.get({ plain: true }));
 
   res.render("sedan", { allSedans });
-  // return;
 });
 
 router.get("/suv", async (req, res) => {
-  //get truck data - form your truck table
   const rawSuvData = await Suv.findAll();
   const allSuvs = rawSuvData.map((suv) => suv.get({ plain: true }));
 
   res.render("suv", { allSuvs });
-  // return;
 });
+
+// get route for userpost/trade in
+
+router.get("/post", async (req, res) => {
+  const rawUserTrade = await Userpost.findAll();
+  const allTrades = rawUserTrade.map((trade) => trade.get({ plain: true }));
+
+  res.render("post", { allTrades });
+});
+
+// POST VEHICLE need logic -- handlebar html is done
+
+router.post("/post", async (req, res) => {
+  try {
+    const vehicleTrade = await Userpost.create(req.body);
+    res.status(200).json(vehicleTrade);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get truck by single id
+// router.get("/truck/:id", async (req, res) => {
+//   try {
+//     const singleTruckRaw = await Truck.findByPk(req.params.id);
+
+//     const oneTruck = singleTruckRaw.get({ plain: true });
+//     res.render("truck", { oneTruck });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

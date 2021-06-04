@@ -14,7 +14,9 @@
     <nav>
       <a href="/">Home</a>
       <a href="/">Search</a>
+
       {{#if loggedIn}}
+        <a href="/post">Post your trade</a>
         <button id="logout" class="btn">Logout</button>
       {{else}}
         <a href="/login">Login</a>
