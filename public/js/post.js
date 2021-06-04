@@ -10,7 +10,7 @@ const vehiclePostHandler = async function (event) {
     body: JSON.stringify({
       model_name: vehicleEl.value,
       engine_type: engineEl.value,
-      transmssion: transmissionEl.value,
+      transmission: transmissionEl.value,
       color: colorEl.value,
     }),
     headers: { "Content-Type": "application/json" },
