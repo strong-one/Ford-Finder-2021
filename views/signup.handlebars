@@ -1,14 +1,18 @@
-<div class="signup-card">
+<h2>Sign-Up</h2>
+
+{{! <div class="signup-card">
   <h2>SignUp</h2>
   <form class="signup-form">
     <div class="form-group">
       <label for="signup-username">Name:</label>
       <input class="form-input" type="text" id="name" />
     </div>
+
     <div class="form-group">
       <label for="signup-email">Email:</label>
       <input class="form-input" type="text" id="signup-email" />
     </div>
+
     <div class="form-group">
       <label for="signup-password">Password:</label>
       <input class="form-input" type="password" id="signup-password" />
@@ -17,6 +21,50 @@
         class="btn btn-primary"
         type="submit"
       >signup</button></div>
+  </form>
+</div> }}
+<div class="signup-card">
+  <form class="signup-form">
+    <div class="form-floating mb-3 form-group">
+      <input
+        type="text"
+        class="form-control form-input"
+        id="name"
+        placeholder="Your name"
+        {{! id="floatingInput " }}
+      />
+      <label for="floatingInput signup-username">Name</label>
+    </div>
+
+    {{! <form class="signup-form">
+    <div class="form-group">
+      <label for="signup-username">Name:</label>
+      <input class="form-input" type="text" id="name" />
+    </div> }}
+
+    <div class="form-floating mb-3 form-group">
+      <input
+        type="email"
+        class="form-control form-input"
+        id="signup-email"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput signup-email">Email address</label>
+    </div>
+
+    <div class="form-floating form-group">
+      <input
+        type="password"
+        class="form-control form-input"
+        id="signup-password"
+        placeholder="Password"
+      />
+      <label for="floatingPassword signup-password">Password</label>
+    </div>
+    <div class="form-group"><button
+        class="btn btn-primary"
+        type="submit"
+      >Sign-Up</button></div>
   </form>
 </div>
 
