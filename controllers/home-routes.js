@@ -78,16 +78,16 @@ router.get("/post", async (req, res) => {
   res.render("post", { allTrades });
 });
 
-// POST VEHICLE need logic -- handlebar html is done
+// POST VEHICLE
 
-router.post("/post", async (req, res) => {
-  try {
-    const vehicleTrade = await Userpost.create(req.body);
-    res.status(200).json(vehicleTrade);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.post("/post", async (req, res) => {
+//   try {
+//     const vehicleTrade = await Userpost.create(req.body);
+//     res.status(200).json(vehicleTrade);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // get truck by single id
 // router.get("/truck/:id", async (req, res) => {
