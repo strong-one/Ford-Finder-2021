@@ -3,6 +3,7 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
 .navbar-brand {
   font-size: 30px;
 }
@@ -17,6 +18,11 @@ h2 {
   margin-left: 30px;
   margin-right: 50px;
 }
+.post-form {
+  font-size: 25;
+  margin-top: 45;
+}
+
 .card {
   margin-bottom: 30px;
 }
