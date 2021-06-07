@@ -10,6 +10,11 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Ford 2021 Line Up</title>
@@ -66,17 +71,7 @@
                 >Signup</a>
               </li>
             {{/if}}
-            {{! <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >Disabled</a>
-            </li> }}
+
           </ul>
         </div>
       </div>
@@ -87,34 +82,10 @@
       {{{body}}}
 
     </main>
+
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
-
-    {{!-- <header>
-      <h1>Check out the all new Ford Line Up for 2021!!</h1>
-    </header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/">Search</a>
-
-      {{#if loggedIn}}
-        <a href="/post">Post your trade</a>
-        <button id="logout" class="btn">Logout</button>
-      {{else}}
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
-      {{/if}}
-    </nav>
-
-    <main>
-      <h2></h2>
-      {{{body}}}
-
-    </main>
-    {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
-    {{/if}} --}}
 
   </body>
 
